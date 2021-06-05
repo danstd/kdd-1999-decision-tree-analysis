@@ -246,7 +246,7 @@ confusionMatrix(train1Classes, kddTest$classification)
     ## Detection Prevalence     0.8055        0.1871     0.007347   0.000000  0.0000000
     ## Balanced Accuracy        0.9920        0.9879     0.877572   0.500000  0.5000000
 
-![Conditional Inference Tree from Random Distribution Training Sample](Z:\classes\IS678\Assignment%201\classifier1Tree.png)
+![Conditional Inference Tree from Random Distribution Training Sample](https://github.com/danstd/kdd-1999-decision-tree-analysis/blob/main/classifier1Tree.png)
 
 #### Adjusted Distribution Sample Decision Tree
 
@@ -364,7 +364,7 @@ confusionMatrix(train2Classes, kddTest$classification)
     ## Detection Prevalence     0.7994        0.1873     0.007347   0.005714  0.0002041
     ## Balanced Accuracy        0.9907        0.9797     0.877572   0.997956  1.0000000
 
-![Conditional Inference Tree from Adjusted Distribution Training Sample](Z:\classifier2Tree.png)
+![Conditional Inference Tree from Adjusted Distribution Training Sample](https://github.com/danstd/kdd-1999-decision-tree-analysis/blob/main/classifier2Tree.png)
 
 ### Comparison
 
@@ -473,7 +473,7 @@ confusionMatrix(train1Classes, kddTest$classification)
     ## Detection Prevalence     0.8055        0.1861     0.007347   0.001020  0.0000000
     ## Balanced Accuracy        0.9920        0.9885     0.877572   0.812500  0.5000000
 
-![Conditional Inference Tree from Random Distribution Training Sample with Selected Attributes](Z:\classifier1TreeTargeted.png)
+![Conditional Inference Tree from Random Distribution Training Sample with Selected Attributes](https://github.com/danstd/kdd-1999-decision-tree-analysis/blob/main/classifier1TreeTargeted.png)
 
 #### Create a CTree classifier from the adjusted sample distribution with targeted attributes
 
