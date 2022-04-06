@@ -327,9 +327,9 @@ classifier2
     ## The final value used for the model was mincriterion = 0.5.
 
 ``` r
-train2Classes <- predict(classifier2, newdata = kddTest[,-42])
+train2Classes <- predict(classifier2, newdata = kddValidation[,-42])
 
-confusionMatrix(train2Classes, kddTest$classification)
+confusionMatrix(train2Classes, kddValidation$classification)
 ```
 
     ## Confusion Matrix and Statistics
@@ -436,9 +436,9 @@ classifier1Targeted
     ## The final value used for the model was mincriterion = 0.5.
 
 ``` r
-train1Classes <- predict(classifier1Targeted, newdata = kddTest[,-42])
+train1Classes <- predict(classifier1Targeted, newdata = kddValidation[,-42])
 
-confusionMatrix(train1Classes, kddTest$classification)
+confusionMatrix(train1Classes, kddValidation$classification)
 ```
 
     ## Confusion Matrix and Statistics
@@ -508,9 +508,9 @@ classifier2Targeted
     ## The final value used for the model was mincriterion = 0.5.
 
 ``` r
-train2Classes <- predict(classifier2Targeted, newdata = kddTest[,-42])
+train2Classes <- predict(classifier2Targeted, newdata = kddValidation[,-42])
 
-confusionMatrix(train2Classes, kddTest$classification)
+confusionMatrix(train2Classes, kddValidation$classification)
 ```
 
     ## Confusion Matrix and Statistics
@@ -551,14 +551,14 @@ With targeted attributes we see that the random distribution decision tree and t
 
 In terms of attack vs. normal traffic classification in prediction of the test set: The random distribution tree misidentified 17 attacks as normal traffic, and 17 normal traffic records were misidentified as attacks. The adjusted distribution tree misidentified 11 attacks as normal traffic, and 51 normal traffic records were misidentified as attacks.
 
-Below, the two trees are used to predict the classification of the validation set:
+Below, the two trees are used to predict the classification of the test set:
 
-Random Distribution Against Validation Set:
+Random Distribution Against Test Set:
 
 ``` r
-validation1Classes <- predict(classifier1Targeted, newdata = kddValidation[,-42])
+test1Classes <- predict(classifier1Targeted, newdata = kddTest[,-42])
 
-confusionMatrix(validation1Classes, kddValidation$classification)
+confusionMatrix(test1Classes, kddTest$classification)
 ```
 
     ## Confusion Matrix and Statistics
@@ -593,12 +593,12 @@ confusionMatrix(validation1Classes, kddValidation$classification)
     ## Detection Prevalence     0.7884        0.2016     0.008776   0.001224  0.0000000
     ## Balanced Accuracy        0.9935        0.9905     0.976538   0.777676  0.5000000
 
-Adjusted Distribution Against Validation Set:
+Adjusted Distribution Against Test Set:
 
 ``` r
-validation2Classes <- predict(classifier2Targeted, newdata = kddValidation[,-42])
+test2Classes <- predict(classifier2Targeted, newdata = kddTest[,-42])
 
-confusionMatrix(validation2Classes, kddValidation$classification)
+confusionMatrix(test2Classes, kddTest$classification)
 ```
 
     ## Confusion Matrix and Statistics
